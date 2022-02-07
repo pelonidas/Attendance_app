@@ -1,7 +1,7 @@
 /*
 primary color: #b7b7a4;
 secondary color: #a5a58d;
-tertiary color: #6b705c;
+tertiary color: #414833;
 */
 
 * {
@@ -15,13 +15,26 @@ tertiary color: #6b705c;
 .table-view .column-header,
 .table-view .column-header .filler,
 .table-view .column-header-background .filler {
-    -fx-background-color: #6b705c;
+    -fx-background-color: #a5a58d;
+    -fx-text-fill: #414833;
 }
 
 .border-horizontal {
     -fx-border-width: 0 1px 0 1px;
     -fx-border-color: #b7b7a4;
     -fx-border-style: solid;
+}
+
+.primary {
+    -fx-text-fill: #b7b7a4;
+}
+
+.secondary {
+    -fx-text-fill: #a5a58d;
+}
+
+.tertiary {
+    -fx-text-fill: #414833;
 }
 
 .bg-primary {
@@ -33,5 +46,5 @@ tertiary color: #6b705c;
 }
 
 .bg-tertiary {
-    -fx-background-color: #6b705c;
+    -fx-background-color: #656d4a;
 }
