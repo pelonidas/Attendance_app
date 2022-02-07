@@ -1,13 +1,23 @@
 package com.attendance.gui.controller;
 
+import com.attendance.be.Student;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.Initializable;
 
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class ViewController implements Initializable {
+
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+
+    }
+
+    private void setupTableView() {
 
     }
 }
