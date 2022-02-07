@@ -102,7 +102,7 @@ public class ViewController implements Initializable {
         loader.setLocation(getClass().getResource("/com/attendance/gui/view/CheckStudentAttendance.fxml"));
         root = loader.load();
         Stage stage = new Stage();
-        stage.setTitle("Add/Remove Movie");
+        stage.setTitle("Confirm your attendance");
         stage.setScene(new Scene(root));
         stage.show();
     }
