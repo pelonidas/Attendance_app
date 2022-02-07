@@ -11,6 +11,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 
 import javax.swing.text.TabableView;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class ViewController implements Initializable {
@@ -34,17 +35,43 @@ public class ViewController implements Initializable {
         classColumn.setCellValueFactory(new PropertyValueFactory<>("currentClass"));
     }
     private void setupData() {
-        Student student1 = new Student(1);
-        student1.setFirstName("jozef");
-        student1.setLastName("Matus");
-        student1.setCurrentClass("kokot");
+        ArrayList<String> fNameList = new ArrayList<>();
+        fNameList.add("Tom");
+        fNameList.add("Maria");
+        fNameList.add("Steven");
+        fNameList.add("John");
+        fNameList.add("Bill");
+        fNameList.add("Noah");
+        fNameList.add("Oliver");
+        fNameList.add("Elijah");
+        fNameList.add("William");
+
+        ArrayList<String> lNameList = new ArrayList<>();
+        lNameList.add("Smith");
+        lNameList.add("Williams");
+        lNameList.add("Brown");
+        lNameList.add("Jones");
+        lNameList.add("Garcia");
+        lNameList.add("Miller");
+        lNameList.add("Davis");
+
+        ArrayList<String> classes = new ArrayList<>();
+        classes.add("Medicine");
+        classes.add("Law");
+        classes.add("Architecture");
+        classes.add("Art & Design");
+        classes.add("Accounting & Finance");
+
         for (int i = 0; i < 50; i++) {
+            int fRand = (int)(Math.random() * fNameList.size());
+            int lRand = (int)(Math.random() * lNameList.size());
+            int cRand = (int)(Math.random() * classes.size());
+
             Student student = new Student(i);
-            student.setFirstName("John" + i);
-            student.setLastName("Doe" + i);
-            student.setCurrentClass("class no." + i);
+            student.setFirstName(fNameList.get(fRand));
+            student.setLastName(fNameList.get(lRand));
+            student.setCurrentClass(classes.get(cRand));
             mockData.getStudents().add(student);
         }
-        mockData.getStudents().add(student1);
     }
 }
