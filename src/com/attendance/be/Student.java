@@ -1,5 +1,7 @@
 package com.attendance.be;
 
+import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
@@ -9,6 +11,7 @@ public class Student {
     private StringProperty firstName;
     private StringProperty lastName;
     private StringProperty currentClass;
+    private IntegerProperty missedDays;
 
     public Student(int id) {
         this.id = id;
@@ -54,6 +57,20 @@ public class Student {
 
     public String getCurrentClass() {
         return currentClassProperty().get();
+    }
+
+    //MISSED DAY
+    public IntegerProperty missedDaysProperty() {
+        if (missedDays == null) missedDays = new SimpleIntegerProperty(this, "missedDays");
+        return missedDays;
+    }
+
+    public void setMissedDays(int missedDays){
+        missedDaysProperty().set(missedDays);
+    }
+
+    public int getMissedDays(){
+        return missedDaysProperty().get();
     }
 
     // ID

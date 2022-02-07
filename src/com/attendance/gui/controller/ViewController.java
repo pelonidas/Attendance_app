@@ -67,15 +67,24 @@ public class ViewController implements Initializable {
         classes.add("Art & Design");
         classes.add("Accounting & Finance");
 
+        ArrayList<Integer> missed = new ArrayList<>();
+        missed.add(6);
+        missed.add(7);
+        missed.add(2);
+        missed.add(12);
+        missed.add(2);
+
         for (int i = 0; i < 50; i++) {
             int fRand = (int)(Math.random() * fNameList.size());
             int lRand = (int)(Math.random() * lNameList.size());
             int cRand = (int)(Math.random() * classes.size());
+            int mRand = (int)(Math.random() * missed.size());
 
             Student student = new Student(i);
             student.setFirstName(fNameList.get(fRand));
             student.setLastName(lNameList.get(lRand));
             student.setCurrentClass(classes.get(cRand));
+            student.setMissedDays(missed.get(mRand));
             mockData.getStudents().add(student);
         }
     }
@@ -89,6 +98,8 @@ public class ViewController implements Initializable {
         stage.setTitle("Overview");
         stage.setScene(new Scene(root));
         stage.show();
+
+
     }
 
     public void oneStudentOnAction(ActionEvent actionEvent) throws IOException {
