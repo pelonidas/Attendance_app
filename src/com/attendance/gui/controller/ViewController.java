@@ -3,6 +3,7 @@ package com.attendance.gui.controller;
 
 import com.attendance.be.Student;
 import com.attendance.gui.model.MockData;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
@@ -73,5 +74,13 @@ public class ViewController implements Initializable {
             student.setCurrentClass(classes.get(cRand));
             mockData.getStudents().add(student);
         }
+    }
+
+    public void overviewOnAction(ActionEvent actionEvent) {
+
+    }
+
+    public void oneStudentOnAction(ActionEvent actionEvent) {
+        
     }
 }

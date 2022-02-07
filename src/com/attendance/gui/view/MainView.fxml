@@ -29,8 +29,8 @@
             <HBox minWidth="-Infinity" spacing="10.0">
                <children>
                   <Button mnemonicParsing="false" text="Most Missed" />
-                  <Button mnemonicParsing="false" text="Overview" />
-                  <Button mnemonicParsing="false" text="Neviem" />
+                  <Button fx:id="overviewButton" mnemonicParsing="false" onAction="#overviewOnAction" text="Overview" />
+                  <Button fx:id="oneStudentButton" mnemonicParsing="false" onAction="#oneStudentOnAction" text="Neviem" />
                </children>
             </HBox>
          </children>
