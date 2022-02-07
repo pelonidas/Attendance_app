@@ -81,19 +81,25 @@ public class ViewController implements Initializable {
     }
 
     public void overviewOnAction(ActionEvent actionEvent) throws IOException {
-        System.out.println("penis");
-//        Parent root;
-//        FXMLLoader loader = new FXMLLoader();
-//        loader.setLocation(getClass().getResource("/GUI/View/AddRemoveMovie.fxml"));
-//        root = loader.load();
-//        Stage stage = new Stage();
-//        stage.setTitle("Add/Remove Movie");
-//        stage.setScene(new Scene(root));
-//        stage.show();
+        Parent root;
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/com/attendance/gui/view/TeacherOverview.fxml"));
+        root = loader.load();
+        Stage stage = new Stage();
+        stage.setTitle("Overview");
+        stage.setScene(new Scene(root));
+        stage.show();
     }
 
-    public void oneStudentOnAction(ActionEvent actionEvent) {
-        
+    public void oneStudentOnAction(ActionEvent actionEvent) throws IOException {
+        Parent root;
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/com/attendance/gui/view/TeacherViewOneStudent.fxml"));
+        root = loader.load();
+        Stage stage = new Stage();
+        stage.setTitle("One Student");
+        stage.setScene(new Scene(root));
+        stage.show();
     }
 
     public void handleCheckButton(ActionEvent event) throws IOException {
@@ -102,7 +108,7 @@ public class ViewController implements Initializable {
         loader.setLocation(getClass().getResource("/com/attendance/gui/view/CheckStudentAttendance.fxml"));
         root = loader.load();
         Stage stage = new Stage();
-        stage.setTitle("Add/Remove Movie");
+        stage.setTitle("Check");
         stage.setScene(new Scene(root));
         stage.show();
     }
