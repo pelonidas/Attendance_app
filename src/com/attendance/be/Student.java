@@ -10,11 +10,8 @@ public class Student {
     private StringProperty lastName;
     private StringProperty currentClass;
 
-    public Student(int id, StringProperty fName, StringProperty lName, StringProperty currentClass) {
+    public Student(int id) {
         this.id = id;
-        this.firstName = fName;
-        this.lastName = lName;
-        this.currentClass = currentClass;
     }
 
     // FIRST NAME

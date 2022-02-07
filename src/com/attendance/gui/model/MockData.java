@@ -4,11 +4,19 @@ import com.attendance.be.Student;
 import javafx.beans.property.StringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.fxml.Initializable;
+
+import java.net.URL;
+import java.util.ResourceBundle;
 
 public class MockData {
-    private ObservableList<Student> students = FXCollections.observableArrayList();
+    private final ObservableList<Student> students = FXCollections.observableArrayList();
 
-    private void setupData() {
-        Student student1 = new Student(1, , "Pumpa", "Marketing");
+
+
+    public ObservableList<Student> getStudents() {
+        return students;
     }
+
+
 }
