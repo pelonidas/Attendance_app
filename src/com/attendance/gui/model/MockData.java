@@ -12,11 +12,7 @@ import java.util.ResourceBundle;
 public class MockData {
     private final ObservableList<Student> students = FXCollections.observableArrayList();
 
-
-
     public ObservableList<Student> getStudents() {
         return students;
     }
-
-
 }

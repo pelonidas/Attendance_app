@@ -38,7 +38,13 @@ public class ViewController implements Initializable {
         student1.setFirstName("jozef");
         student1.setLastName("Matus");
         student1.setCurrentClass("kokot");
-
+        for (int i = 0; i < 50; i++) {
+            Student student = new Student(i);
+            student.setFirstName("John" + i);
+            student.setLastName("Doe" + i);
+            student.setCurrentClass("class no." + i);
+            mockData.getStudents().add(student);
+        }
         mockData.getStudents().add(student1);
     }
 }
