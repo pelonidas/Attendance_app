@@ -35,6 +35,7 @@ public class ViewController implements Initializable {
 
     private void setupTableView() {
         studentsTableView.setItems(mockData.getStudents());
+
         fNameColumn.setCellValueFactory(new PropertyValueFactory<>("firstName"));
         lNameColumn.setCellValueFactory(new PropertyValueFactory<>("lastName"));
         classColumn.setCellValueFactory(new PropertyValueFactory<>("currentClass"));
