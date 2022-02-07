@@ -53,7 +53,7 @@
                         </BorderPane>
                         <BorderPane>
                            <center>
-                              <Button mnemonicParsing="false" text="Check" BorderPane.alignment="CENTER" />
+                              <Button mnemonicParsing="false" onAction="#handleCheckButton" text="Check" BorderPane.alignment="CENTER" />
                            </center>
                            <VBox.margin>
                               <Insets top="25.0" />

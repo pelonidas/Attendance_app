@@ -81,17 +81,29 @@ public class ViewController implements Initializable {
     }
 
     public void overviewOnAction(ActionEvent actionEvent) throws IOException {
+        System.out.println("penis");
+//        Parent root;
+//        FXMLLoader loader = new FXMLLoader();
+//        loader.setLocation(getClass().getResource("/GUI/View/AddRemoveMovie.fxml"));
+//        root = loader.load();
+//        Stage stage = new Stage();
+//        stage.setTitle("Add/Remove Movie");
+//        stage.setScene(new Scene(root));
+//        stage.show();
+    }
+
+    public void oneStudentOnAction(ActionEvent actionEvent) {
+        
+    }
+
+    public void handleCheckButton(ActionEvent event) throws IOException {
         Parent root;
         FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("/GUI/View/AddRemoveMovie.fxml"));
+        loader.setLocation(getClass().getResource("/com/attendance/gui/view/CheckStudentAttendance.fxml"));
         root = loader.load();
         Stage stage = new Stage();
         stage.setTitle("Add/Remove Movie");
         stage.setScene(new Scene(root));
         stage.show();
-    }
-
-    public void oneStudentOnAction(ActionEvent actionEvent) {
-        
     }
 }
