@@ -23,6 +23,10 @@ public class TeacherOverviewController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        setBarChar();
+    }
+
+    public void setBarChar(){
         XYChart.Series<String, Integer> series = new XYChart.Series<>();
 
         series.getData().add(new XYChart.Data<>("January", 5));
