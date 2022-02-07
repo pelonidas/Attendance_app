@@ -21,6 +21,9 @@ tertiary color: #414833;
     -fx-text-fill: #414833;
     -fx-font-weight: bold;
 }
+.table-column {
+    -fx-border-width: 0;
+}
 .table-view .column-header,
 .table-view .column-header .filler,
 .table-view .column-header-background .filler {
