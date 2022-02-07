@@ -25,7 +25,6 @@ public class ViewController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         mockData = new MockData();
         setupData();
-        System.out.println(mockData.getStudents());
         setupTableView();
     }
 
