@@ -5,12 +5,17 @@ import com.attendance.be.Student;
 import com.attendance.gui.model.MockData;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 
 import javax.swing.text.TabableView;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
@@ -75,8 +80,15 @@ public class ViewController implements Initializable {
         }
     }
 
-    public void overviewOnAction(ActionEvent actionEvent) {
-
+    public void overviewOnAction(ActionEvent actionEvent) throws IOException {
+        Parent root;
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/GUI/View/AddRemoveMovie.fxml"));
+        root = loader.load();
+        Stage stage = new Stage();
+        stage.setTitle("Add/Remove Movie");
+        stage.setScene(new Scene(root));
+        stage.show();
     }
 
     public void oneStudentOnAction(ActionEvent actionEvent) {
