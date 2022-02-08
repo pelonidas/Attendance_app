@@ -1,10 +1,12 @@
 package com.attendance.gui.controller;
 
+import com.attendance.gui.model.MockData;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.chart.*;
 
 import java.net.URL;
+import java.util.Random;
 import java.util.ResourceBundle;
 
 
@@ -12,13 +14,16 @@ public class TeacherOverviewController implements Initializable {
     @FXML
     private BarChart<String, Number> barChar;
     @FXML
-    public CategoryAxis xAxis;
+    private CategoryAxis xAxis;
+
+    private MockData mockData;
 
     //private ObservableList<String> monthStudent = FXCollections.observableArrayList();
 
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        mockData = new MockData();
         setBarChar();
     }
 
@@ -26,26 +31,26 @@ public class TeacherOverviewController implements Initializable {
         XYChart.Series<String, Number> series = new XYChart.Series<>();
         series.setName("Students");
 
-
         Axis<Number> yAxis = barChar.getYAxis();
         yAxis.setLabel("Missing Days");
 
-
-        series.getData().add(new XYChart.Data<>("January", 54));
-        series.getData().add(new XYChart.Data<>("February", 90));
-        series.getData().add(new XYChart.Data<>("March", 22));
-        series.getData().add(new XYChart.Data<>("April", 56));
-        series.getData().add(new XYChart.Data<>("May", 3));
-        series.getData().add(new XYChart.Data<>("June", 12));
-        series.getData().add(new XYChart.Data<>("July", 23));
-        series.getData().add(new XYChart.Data<>("August", 60));
-        series.getData().add(new XYChart.Data<>("September ", 34));
-        series.getData().add(new XYChart.Data<>("October ", 24));
-        series.getData().add(new XYChart.Data<>("November ", 9));
-        series.getData().add(new XYChart.Data<>("December", 19));
-
+        for (int i = 0; i < studentListSize(); i++){
+            Random random = new Random();
+            System.out.println(random.nextInt(90) + 10);
+            series.getData().add(new XYChart.Data<>(studentsLastNameToChart(i), random.nextInt(90) + 10));
+        }
         barChar.getData().add(series);
     }
+
+    public String studentsLastNameToChart(int student){
+        return mockData.getStudents().get(student).getLastName();
+    }
+
+    public int studentListSize(){
+        return mockData.getStudents().size();
+    }
+
+
 }
 
 
