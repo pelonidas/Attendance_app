@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.chart.BarChart?>
 <?import javafx.scene.chart.CategoryAxis?>
@@ -9,19 +10,23 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.attendance.gui.controller.TeacherOverviewController">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" stylesheets="@../../../../Main.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.attendance.gui.controller.TeacherOverviewController">
    <children>
-      <BarChart fx:id="barChar" layoutX="60.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+      <BarChart fx:id="barChar" layoutX="60.0" layoutY="52.0" prefHeight="548.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="52.0">
         <xAxis>
-          <CategoryAxis label="Months" side="BOTTOM" fx:id="xAxis" />
+          <CategoryAxis side="BOTTOM" fx:id="xAxis" />
         </xAxis>
         <yAxis>
-          <NumberAxis label="Days Missing" side="LEFT" />
+          <NumberAxis label="Days Missing" side="LEFT" styleClass="tertiary" />
         </yAxis>
+         <styleClass>
+            <String fx:value="bg-primary" />
+            <String fx:value="chart-bar" />
+         </styleClass>
       </BarChart>
-      <BorderPane prefHeight="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <BorderPane prefHeight="52.0" prefWidth="800.0" styleClass="bg-primary" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <center>
-            <Label text="Overview" BorderPane.alignment="CENTER">
+            <Label styleClass="tertiary" text="Overview" BorderPane.alignment="CENTER">
                <BorderPane.margin>
                   <Insets top="20.0" />
                </BorderPane.margin>
