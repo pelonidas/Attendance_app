@@ -5,9 +5,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.chart.BarChart;
-import javafx.scene.chart.CategoryAxis;
-import javafx.scene.chart.XYChart;
+import javafx.scene.chart.*;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -15,11 +13,12 @@ import java.util.ResourceBundle;
 
 public class TeacherOverviewController implements Initializable {
     @FXML
-    private BarChart<String, Integer> barChar;
+    private BarChart<String, Number> barChar;
     @FXML
     public CategoryAxis xAxis;
 
-    private ObservableList<String> monthStudent = FXCollections.observableArrayList();
+    //private ObservableList<String> monthStudent = FXCollections.observableArrayList();
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -27,9 +26,17 @@ public class TeacherOverviewController implements Initializable {
     }
 
     public void setBarChar(){
-        XYChart.Series<String, Integer> series = new XYChart.Series<>();
+        XYChart.Series<String, Number> series = new XYChart.Series<>();
+        series.setName("Students");
 
-        series.getData().add(new XYChart.Data<>("January", 5));
+        Axis<String> xAxis = barChar.getXAxis();
+        xAxis.setLabel("Months");
+
+        Axis<Number> yAxis = barChar.getYAxis();
+        yAxis.setLabel("Missing Days");
+
+
+        series.getData().add(new XYChart.Data<>("January", 54));
         series.getData().add(new XYChart.Data<>("February", 90));
         series.getData().add(new XYChart.Data<>("March", 22));
         series.getData().add(new XYChart.Data<>("April", 56));
@@ -42,7 +49,7 @@ public class TeacherOverviewController implements Initializable {
         series.getData().add(new XYChart.Data<>("November ", 9));
         series.getData().add(new XYChart.Data<>("December", 19));
 
-        barChar.getData().addAll(series);
+        barChar.getData().add(series);
     }
 }
 
