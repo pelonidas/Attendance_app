@@ -51,7 +51,6 @@ public class TeacherViewAllStudentsController implements Initializable {
         tableClmLName.setCellValueFactory(new PropertyValueFactory<>("lastName"));
         tableClmHours.setCellValueFactory(new PropertyValueFactory<>("missedDays"));
 
-
         tableClmHours.setSortType(TableColumn.SortType.DESCENDING);
         tableViewMiss.getSortOrder().add(tableClmHours);
         tableViewMiss.sort();
