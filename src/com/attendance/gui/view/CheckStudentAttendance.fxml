@@ -38,8 +38,8 @@
          <right>
             <HBox spacing="10.0" BorderPane.alignment="CENTER">
                <children>
-                  <Button mnemonicParsing="false" styleClass="btn-primary" text="Cancel" />
-                  <Button mnemonicParsing="false" styleClass="btn-secondary" text="Confirm" />
+                  <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#handleCancelButton" styleClass="btn-primary" text="Cancel" />
+                  <Button fx:id="confirmButton" mnemonicParsing="false" onAction="#handleConfirmButton" styleClass="btn-secondary" text="Confirm" />
                </children>
             </HBox>
          </right>
