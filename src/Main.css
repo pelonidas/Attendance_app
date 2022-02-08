@@ -99,6 +99,10 @@ tertiary color: #414833;
     -fx-bar-fill: #a5a58d;
 }
 
+.chart-plot-background {
+    -fx-background-color: #b7b7a4;
+}
+
 .btn-primary {
     -fx-text-fill: #414833;
     -fx-padding: 5 15;
