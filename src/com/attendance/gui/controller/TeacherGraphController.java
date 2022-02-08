@@ -13,7 +13,7 @@ import java.net.URL;
 import java.util.Random;
 import java.util.ResourceBundle;
 
-public class TeacherGraphController implements Initializable{
+public class TeacherGraphController implements Initializable {
 
     MockData model;
 
@@ -32,23 +32,20 @@ public class TeacherGraphController implements Initializable{
     private void setChart() {
         Random random = new Random();
 
-        XYChart.Series<String, Number> series = new XYChart.Series<String, Number>();
-
+        XYChart.Series<String, Number> series = new XYChart.Series<>();
 
         for (int i = 0; i < 11; i++) {
-            series.getData().add(new XYChart.Data<String, Number>(model.getMonths().get(i), random.nextInt(350)+150));
+            series.getData().add(new XYChart.Data<>(model.getMonths().get(i), random.nextInt(350)+150));
 
         }
         series.setName("year 2022");
-
         lineChart.getData().add(series);
 
     }
 
-
-    @FXML
-    void toCancelScene(ActionEvent event) {
+    public void toCancelScene(ActionEvent actionEvent) {
         Stage stage = (Stage) cancelBtn.getScene().getWindow();
         stage.close();
     }
-}
+
+} //TODO change responsivity of the button in the view of this controller

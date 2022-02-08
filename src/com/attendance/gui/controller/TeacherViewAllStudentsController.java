@@ -1,51 +1,64 @@
 package com.attendance.gui.controller;
 
+import com.attendance.be.Student;
 import com.attendance.gui.model.MockData;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.chart.LineChart;
-import javafx.scene.chart.XYChart;
 import javafx.scene.control.Button;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 import java.net.URL;
-import java.util.Random;
 import java.util.ResourceBundle;
 
 public class TeacherViewAllStudentsController implements Initializable {
-
-    MockData model;
 
     @FXML
     private Button cancelBtn;
 
     @FXML
-    private LineChart<String, Number> lineChart;
+    private TableColumn<Student, String> tableClmFName;
+
+    @FXML
+    private TableColumn<Student, Integer> tableClmHours;
+
+    @FXML
+    private TableColumn<Student, String> tableClmLName;
+
+    @FXML
+    private TableView<Student> tableViewMiss;
+
+    private MockData model;
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         model = new MockData();
-        setChart();
     }
 
-    private void setChart() {
-        Random random = new Random();
-
-        XYChart.Series<String, Number> series = new XYChart.Series<String, Number>();
-
-
-        for (int i = 0; i < 11; i++) {
-            series.getData().add(new XYChart.Data<String, Number>(model.getMonths().get(i), random.nextInt(350)+150));
-
-        }
-        series.setName("year 2022");
-        lineChart.getData().add(series);
-
-    }
-
-    public void toCancelScene(ActionEvent actionEvent) {
+    @FXML
+    void toCancelScene(ActionEvent event) {
         Stage stage = (Stage) cancelBtn.getScene().getWindow();
         stage.close();
+    }
+
+    void setTableView () {
+        tableViewMiss.setItems(model.getStudents());
+        tableClmFName.setCellValueFactory(new PropertyValueFactory<>("firstName"));
+        tableClmLName.setCellValueFactory(new PropertyValueFactory<>("lastName"));
+        tableClmHours.setCellValueFactory(new PropertyValueFactory<>("missedDays"));
+
+
+        tableClmHours.setSortType(TableColumn.SortType.DESCENDING);
+        tableViewMiss.getSortOrder().add(tableClmHours);
+        tableViewMiss.sort();
+    }
+
+    @FXML
+    void toShowTableView(ActionEvent event) {
+        setTableView();
     }
 }

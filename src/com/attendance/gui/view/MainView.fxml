@@ -33,7 +33,7 @@
             </BorderPane>
             <HBox minWidth="-Infinity" spacing="10.0">
                <children>
-                  <Button mnemonicParsing="false" styleClass="btn-secondary" text="Most Missed" />
+                  <Button fx:id="mostMissedBtn" mnemonicParsing="false" onAction="#toTeacherStudents" styleClass="btn-secondary" text="Most Missed" />
                   <Button fx:id="overviewButton" mnemonicParsing="false" onAction="#overviewOnAction" styleClass="btn-secondary" text="Overview" />
                   <Button fx:id="oneStudentButton" mnemonicParsing="false" onAction="#oneStudentOnAction" styleClass="btn-secondary" text="Neviem" />
                </children>
@@ -71,7 +71,7 @@
                         </BorderPane>
                         <BorderPane minWidth="-Infinity">
                            <center>
-                              <Button mnemonicParsing="false" styleClass="btn-primary" text="Very long text" BorderPane.alignment="CENTER">
+                              <Button fx:id="teacherGraphBtn" mnemonicParsing="false" onAction="#toTeacherGraph" styleClass="btn-primary" text="Very long text" BorderPane.alignment="CENTER">
                                  <BorderPane.margin>
                                     <Insets top="10.0" />
                                  </BorderPane.margin>
