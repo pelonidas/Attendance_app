@@ -5,6 +5,9 @@ import javafx.fxml.Initializable;
 import javafx.scene.chart.*;
 
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 import java.util.ResourceBundle;
 
 
@@ -30,21 +33,24 @@ public class TeacherOverviewController implements Initializable {
         Axis<Number> yAxis = barChar.getYAxis();
         yAxis.setLabel("Missing Days");
 
-
-        series.getData().add(new XYChart.Data<>("January", 54));
-        series.getData().add(new XYChart.Data<>("February", 90));
-        series.getData().add(new XYChart.Data<>("March", 22));
-        series.getData().add(new XYChart.Data<>("April", 56));
-        series.getData().add(new XYChart.Data<>("May", 3));
-        series.getData().add(new XYChart.Data<>("June", 12));
-        series.getData().add(new XYChart.Data<>("July", 23));
-        series.getData().add(new XYChart.Data<>("August", 60));
-        series.getData().add(new XYChart.Data<>("September ", 34));
-        series.getData().add(new XYChart.Data<>("October ", 24));
-        series.getData().add(new XYChart.Data<>("November ", 9));
-        series.getData().add(new XYChart.Data<>("December", 19));
-
+        for (String student: studentsToChart()){
+            Random random = new Random();
+            System.out.println(random.nextInt(90) + 10);
+            series.getData().add(new XYChart.Data<>(student, random.nextInt(90) + 10));
+        }
         barChar.getData().add(series);
+    }
+
+    public static List<String> studentsToChart(){
+        ArrayList<String> lNameList = new ArrayList<>();
+        lNameList.add("Smith");
+        lNameList.add("Williams");
+        lNameList.add("Brown");
+        lNameList.add("Jones");
+        lNameList.add("Garcia");
+        lNameList.add("Miller");
+        lNameList.add("Davis");
+        return lNameList;
     }
 }
 
