@@ -85,7 +85,9 @@ tertiary color: #414833;
     -fx-background-insets : 2.0, 0.0, 0.0;
     -fx-background-radius : 2.0em;
 }
-
+.border-none {
+    -fx-background-radius: 0;
+}
 .border-horizontal {
     -fx-border-width: 0 1px 0 1px;
     -fx-border-color: #b7b7a4;

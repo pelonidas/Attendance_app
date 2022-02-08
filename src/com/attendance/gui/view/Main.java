@@ -12,7 +12,7 @@ public class Main extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("MainView.fxml"));
         primaryStage.setMinHeight(350);
         primaryStage.setMinWidth(720);
-        primaryStage.setTitle("MovieCollection");
+        primaryStage.setTitle("Attendance Automatization");
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
     }

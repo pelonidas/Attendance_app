@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
@@ -10,28 +11,35 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="300.0" spacing="5.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.attendance.gui.controller.CheckStudentAttendanceController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="300.0" spacing="5.0" styleClass="bg-primary" stylesheets="@../../../../Main.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.attendance.gui.controller.CheckStudentAttendanceController">
    <children>
-      <Label text="Day">
+      <Label styleClass="tertiary" text="Day">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <TextField />
-      <Label text="Month">
+      <TextField>
+         <styleClass>
+            <String fx:value="bg-secondary" />
+            <String fx:value="border-none" />
+         </styleClass></TextField>
+      <Label styleClass="tertiary" text="Month">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <TextField />
+      <TextField>
+         <styleClass>
+            <String fx:value="bg-secondary" />
+            <String fx:value="border-none" />
+         </styleClass></TextField>
       <Region VBox.vgrow="ALWAYS" />
       <BorderPane>
          <right>
             <HBox spacing="10.0" BorderPane.alignment="CENTER">
                <children>
-                  <Button mnemonicParsing="false" text="Cancel" />
-                  <Button mnemonicParsing="false" text="Confirm" />
+                  <Button mnemonicParsing="false" styleClass="btn-primary" text="Cancel" />
+                  <Button mnemonicParsing="false" styleClass="btn-secondary" text="Confirm" />
                </children>
             </HBox>
          </right>
