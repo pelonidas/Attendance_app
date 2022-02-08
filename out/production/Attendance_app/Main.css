@@ -94,15 +94,24 @@ tertiary color: #414833;
     -fx-border-color: #b7b7a4;
     -fx-border-style: solid;
 }
-
 .chart-bar {
     -fx-bar-fill: #a5a58d;
 }
-
 .chart-plot-background {
     -fx-background-color: #b7b7a4;
 }
-
+.axis-label {
+    -fx-text-fill: #414833;
+}
+.chart-legend {
+    -fx-background-color: #b7b7a4;
+}
+.chart-vertical-grid-lines {
+    -fx-stroke: #a5a58d;
+}
+.chart-horizontal-grid-lines {
+    -fx-stroke: #a5a58d;
+}
 .btn-primary {
     -fx-text-fill: #414833;
     -fx-padding: 5 15;
