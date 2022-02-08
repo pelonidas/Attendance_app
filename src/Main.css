@@ -103,6 +103,12 @@ tertiary color: #414833;
     -fx-background-color: #b7b7a4;
 }
 
+.axis-label {
+    -fx-text-fill: #414833;
+}
+.chart-legend {
+    -fx-background-color: #b7b7a4;
+}
 .btn-primary {
     -fx-text-fill: #414833;
     -fx-padding: 5 15;
