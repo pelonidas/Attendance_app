@@ -31,7 +31,6 @@ public class TeacherOverviewController implements Initializable {
         XYChart.Series<String, Number> series = new XYChart.Series<>();
         series.setName("Students");
 
-
         Axis<Number> yAxis = barChar.getYAxis();
         yAxis.setLabel("Missing Days");
 
