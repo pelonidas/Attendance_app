@@ -1,12 +1,11 @@
 package com.attendance.gui.controller;
 
+import com.attendance.gui.model.MockData;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.chart.*;
 
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 import java.util.ResourceBundle;
 
@@ -15,13 +14,16 @@ public class TeacherOverviewController implements Initializable {
     @FXML
     private BarChart<String, Number> barChar;
     @FXML
-    public CategoryAxis xAxis;
+    private CategoryAxis xAxis;
+
+    private MockData mockData;
 
     //private ObservableList<String> monthStudent = FXCollections.observableArrayList();
 
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        mockData = new MockData();
         setBarChar();
     }
 
@@ -33,25 +35,23 @@ public class TeacherOverviewController implements Initializable {
         Axis<Number> yAxis = barChar.getYAxis();
         yAxis.setLabel("Missing Days");
 
-        for (String student: studentsToChart()){
+        for (int i = 0; i < studentListSize(); i++){
             Random random = new Random();
             System.out.println(random.nextInt(90) + 10);
-            series.getData().add(new XYChart.Data<>(student, random.nextInt(90) + 10));
+            series.getData().add(new XYChart.Data<>(studentsLastNameToChart(i), random.nextInt(90) + 10));
         }
         barChar.getData().add(series);
     }
 
-    public static List<String> studentsToChart(){
-        ArrayList<String> lNameList = new ArrayList<>();
-        lNameList.add("Smith");
-        lNameList.add("Williams");
-        lNameList.add("Brown");
-        lNameList.add("Jones");
-        lNameList.add("Garcia");
-        lNameList.add("Miller");
-        lNameList.add("Davis");
-        return lNameList;
+    public String studentsLastNameToChart(int student){
+        return mockData.getStudents().get(student).getLastName();
     }
+
+    public int studentListSize(){
+        return mockData.getStudents().size();
+    }
+
+
 }
 
 
