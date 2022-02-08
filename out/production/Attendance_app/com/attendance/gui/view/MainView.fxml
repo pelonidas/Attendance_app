@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.VBox?>
 
-<SplitPane centerShape="false" dividerPositions="0.25" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" stylesheets="@../../../../Main.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.attendance.gui.controller.ViewController">
+<SplitPane centerShape="false" dividerPositions="0.25" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="800.0" stylesheets="@../../../../Main.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.attendance.gui.controller.ViewController">
   <items>
       <VBox minWidth="-Infinity" styleClass="bg-primary">
          <children>
@@ -33,9 +33,9 @@
             </BorderPane>
             <HBox minWidth="-Infinity" spacing="10.0">
                <children>
-                  <Button mnemonicParsing="false" text="Most Missed" />
-                  <Button fx:id="overviewButton" mnemonicParsing="false" onAction="#overviewOnAction" text="Overview" />
-                  <Button fx:id="oneStudentButton" mnemonicParsing="false" onAction="#oneStudentOnAction" text="Neviem" />
+                  <Button mnemonicParsing="false" styleClass="btn-secondary" text="Most Missed" />
+                  <Button fx:id="overviewButton" mnemonicParsing="false" onAction="#overviewOnAction" styleClass="btn-secondary" text="Overview" />
+                  <Button fx:id="oneStudentButton" mnemonicParsing="false" onAction="#oneStudentOnAction" styleClass="btn-secondary" text="Neviem" />
                </children>
             </HBox>
          </children>
@@ -63,7 +63,7 @@
                         </BorderPane>
                         <BorderPane>
                            <center>
-                              <Button mnemonicParsing="false" onAction="#handleCheckButton" text="Check" BorderPane.alignment="CENTER" />
+                              <Button mnemonicParsing="false" onAction="#handleCheckButton" styleClass="btn-primary" text="Check" BorderPane.alignment="CENTER" />
                            </center>
                            <VBox.margin>
                               <Insets top="25.0" />
@@ -71,7 +71,7 @@
                         </BorderPane>
                         <BorderPane minWidth="-Infinity">
                            <center>
-                              <Button mnemonicParsing="false" text="Very long text" BorderPane.alignment="CENTER">
+                              <Button mnemonicParsing="false" styleClass="btn-primary" text="Very long text" BorderPane.alignment="CENTER">
                                  <BorderPane.margin>
                                     <Insets top="10.0" />
                                  </BorderPane.margin>

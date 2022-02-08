@@ -92,6 +92,36 @@ tertiary color: #414833;
     -fx-border-style: solid;
 }
 
+.btn-primary {
+    -fx-text-fill: #414833;
+    -fx-padding: 5 15;
+    -fx-background-color: #b7b7a4;
+    -fx-background-radius: 0;
+    -fx-border-width: 2px;
+    -fx-border-color: #414833;
+    -fx-border-style: solid;
+}
+.btn-primary:hover {
+    -fx-cursor: hand;
+    -fx-text-fill: #b7b7a4;
+    -fx-background-color: #414833;
+}
+
+.btn-secondary {
+    -fx-text-fill: #414833;
+    -fx-padding: 5 15;
+    -fx-background-radius: 0;
+    -fx-background-color: #a5a58d;
+    -fx-border-width: 2px;
+    -fx-border-color: #414833;
+    -fx-border-style: solid;
+}
+.btn-secondary:hover {
+    -fx-cursor: hand;
+    -fx-text-fill: #b7b7a4;
+    -fx-background-color: #414833;
+}
+
 .primary {
     -fx-text-fill: #b7b7a4;
 }
