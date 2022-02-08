@@ -24,7 +24,7 @@
                   </Label>
                </top>
                <bottom>
-                  <Button mnemonicParsing="false" onAction="#toCancelScene" text="Cancel" BorderPane.alignment="CENTER">
+                  <Button fx:id="cancelBtn" mnemonicParsing="false" onAction="#toCancelScene" text="Cancel" BorderPane.alignment="CENTER">
                      <BorderPane.margin>
                         <Insets bottom="20.0" />
                      </BorderPane.margin>

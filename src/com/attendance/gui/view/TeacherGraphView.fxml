@@ -18,7 +18,7 @@
       </LineChart>
       <AnchorPane layoutX="46.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="350.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Button layoutX="519.0" layoutY="13.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="66.0" text="Cancel" />
+            <Button fx:id="cancelBtn" layoutX="519.0" layoutY="13.0" mnemonicParsing="false" onAction="#toCancelScene" prefHeight="26.0" prefWidth="66.0" text="Cancel" />
          </children>
       </AnchorPane>
    </children>

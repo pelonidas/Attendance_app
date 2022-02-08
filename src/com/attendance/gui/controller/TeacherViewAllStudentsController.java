@@ -6,6 +6,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.chart.LineChart;
 import javafx.scene.chart.XYChart;
+import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
 import java.net.URL;
@@ -15,6 +16,9 @@ import java.util.ResourceBundle;
 public class TeacherViewAllStudentsController implements Initializable {
 
     MockData model;
+
+    @FXML
+    private Button cancelBtn;
 
     @FXML
     private LineChart<String, Number> lineChart;
@@ -36,12 +40,12 @@ public class TeacherViewAllStudentsController implements Initializable {
 
         }
         series.setName("year 2022");
-
         lineChart.getData().add(series);
 
     }
 
     public void toCancelScene(ActionEvent actionEvent) {
-        
+        Stage stage = (Stage) cancelBtn.getScene().getWindow();
+        stage.close();
     }
 }
