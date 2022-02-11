@@ -17,7 +17,8 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class ViewController implements Initializable {
@@ -47,39 +48,10 @@ public class ViewController implements Initializable {
         classColumn.setCellValueFactory(new PropertyValueFactory<>("currentClass"));
     }
     private void setupData() {
-        ArrayList<String> fNameList = new ArrayList<>();
-        fNameList.add("Tom");
-        fNameList.add("Maria");
-        fNameList.add("Steven");
-        fNameList.add("John");
-        fNameList.add("Bill");
-        fNameList.add("Noah");
-        fNameList.add("Oliver");
-        fNameList.add("Elijah");
-        fNameList.add("William");
-
-        ArrayList<String> lNameList = new ArrayList<>();
-        lNameList.add("Smith");
-        lNameList.add("Williams");
-        lNameList.add("Brown");
-        lNameList.add("Jones");
-        lNameList.add("Garcia");
-        lNameList.add("Miller");
-        lNameList.add("Davis");
-
-        ArrayList<String> classes = new ArrayList<>();
-        classes.add("Medicine");
-        classes.add("Law");
-        classes.add("Architecture");
-        classes.add("Art & Design");
-        classes.add("Accounting & Finance");
-
-        ArrayList<Integer> missed = new ArrayList<>();
-        missed.add(6);
-        missed.add(7);
-        missed.add(2);
-        missed.add(12);
-        missed.add(2);
+        List<String> fNameList = Arrays.asList("Tom", "Maria", "Steven", "John", "Bill", "Noah", "Oliver", "Elijah", "William");
+        List<String> lNameList = Arrays.asList("Smith","Williams","Brown","Jones","Garcia","Miller","Davis");
+        List<String> classes = Arrays.asList("Medicine", "Law", "Architecture", "Art&Design", "Accounting & Finance");
+        List<Integer> missed = Arrays.asList(6, 7, 2, 12, 2, 5);
 
         for (int i = 0; i < 50; i++) {
             int fRand = (int)(Math.random() * fNameList.size());
@@ -142,12 +114,6 @@ public class ViewController implements Initializable {
         stage.setTitle("All students");
         stage.setScene(new Scene(root));
         stage.show();
-
-        /* Stage stage = new Stage();
-                Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("pathHere")));
-                stage.setTitle("nameHere");
-                stage.setScene(new Scene(root));
-                stage.show(); */
 
     } // this button set new Scene of TeacherViewAllStudents.fxml with TeacherGraphController
 
