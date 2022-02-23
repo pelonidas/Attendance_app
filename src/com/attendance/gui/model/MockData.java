@@ -1,58 +1,26 @@
 package com.attendance.gui.model;
 
 import com.attendance.be.Student;
-import javafx.beans.property.StringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.fxml.Initializable;
 
-import java.net.URL;
-import java.util.ArrayList;
-import java.util.ResourceBundle;
+import java.util.Arrays;
+import java.util.List;
 
 public class MockData {
     private final ObservableList<Student> students = FXCollections.observableArrayList();
-    private ObservableList<String> months = FXCollections.observableArrayList();;
+    private ObservableList<String> months;
 
 
     public MockData() {
-        setData();
+        setMockData();
     }
 
-    private void setData() {
-        ArrayList<String> fNameList = new ArrayList<>();
-        fNameList.add("Tom");
-        fNameList.add("Maria");
-        fNameList.add("Steven");
-        fNameList.add("John");
-        fNameList.add("Bill");
-        fNameList.add("Noah");
-        fNameList.add("Oliver");
-        fNameList.add("Elijah");
-        fNameList.add("William");
-
-        ArrayList<String> lNameList = new ArrayList<>();
-        lNameList.add("Smith");
-        lNameList.add("Williams");
-        lNameList.add("Brown");
-        lNameList.add("Jones");
-        lNameList.add("Garcia");
-        lNameList.add("Miller");
-        lNameList.add("Davis");
-
-        ArrayList<String> classes = new ArrayList<>();
-        classes.add("Medicine");
-        classes.add("Law");
-        classes.add("Architecture");
-        classes.add("Art & Design");
-        classes.add("Accounting & Finance");
-
-        ArrayList<Integer> missed = new ArrayList<>();
-        missed.add(6);
-        missed.add(7);
-        missed.add(2);
-        missed.add(12);
-        missed.add(2);
+    private void setMockData() {
+        List<String> fNameList = Arrays.asList("Tom", "Maria", "Steven", "John", "Bill", "Noah", "Oliver", "Elijah", "William");
+        List<String> lNameList = Arrays.asList("Smith","Williams","Brown","Jones","Garcia","Miller","Davis");
+        List<String> classes = Arrays.asList("Medicine", "Law", "Architecture", "Art&Design", "Accounting & Finance");
+        List<Integer> missed = Arrays.asList(6, 7, 2, 12, 2, 5);
 
         for (int i = 0; i < 50; i++) {
             int fRand = (int)(Math.random() * fNameList.size());
@@ -74,18 +42,9 @@ public class MockData {
     }
 
     public ObservableList<String> getMonths(){
-        months.add("January");
-        months.add("February");
-        months.add("March");
-        months.add("April");
-        months.add("May");
-        months.add("June");
-        months.add("Jule");
-        months.add("August");
-        months.add("September");
-        months.add("October");
-        months.add("November");
-        months.add("December");
+        List<String> monthsList = Arrays.asList("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
+        months = FXCollections.observableArrayList();
+        months.setAll(monthsList);
         return months;
     }
 }
