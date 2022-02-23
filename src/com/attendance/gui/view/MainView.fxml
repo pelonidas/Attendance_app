@@ -35,7 +35,7 @@
                <children>
                   <Button fx:id="mostMissedBtn" mnemonicParsing="false" onAction="#toTeacherStudents" styleClass="btn-secondary" text="Most Missed" />
                   <Button fx:id="overviewButton" mnemonicParsing="false" onAction="#overviewOnAction" styleClass="btn-secondary" text="Overview" />
-                  <Button fx:id="oneStudentButton" mnemonicParsing="false" onAction="#oneStudentOnAction" styleClass="btn-secondary" text="Neviem" />
+                  <Button fx:id="oneStudentButton" mnemonicParsing="false" onAction="#oneStudentOnAction" styleClass="btn-secondary" text="Chart" />
                </children>
             </HBox>
          </children>
@@ -47,7 +47,7 @@
          <children>
             <HBox minWidth="-Infinity" prefHeight="398.0" styleClass="bg-secondary" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
-                  <VBox minWidth="-Infinity">
+                  <VBox minWidth="-Infinity" prefWidth="112.0">
                      <children>
                         <BorderPane>
                            <center>
@@ -71,7 +71,7 @@
                         </BorderPane>
                         <BorderPane minWidth="-Infinity">
                            <center>
-                              <Button fx:id="teacherGraphBtn" mnemonicParsing="false" onAction="#toTeacherGraph" styleClass="btn-primary" text="Very long text" BorderPane.alignment="CENTER">
+                              <Button fx:id="teacherGraphBtn" mnemonicParsing="false" onAction="#toTeacherGraph" styleClass="btn-primary" text="Statistics" BorderPane.alignment="CENTER">
                                  <BorderPane.margin>
                                     <Insets top="10.0" />
                                  </BorderPane.margin>

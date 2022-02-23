@@ -17,17 +17,6 @@
       <BorderPane layoutX="148.0" layoutY="66.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <right>
             <BorderPane prefHeight="353.0" prefWidth="106.0" styleClass="bg-primary" BorderPane.alignment="CENTER">
-               <top>
-                  <Label prefHeight="38.0" prefWidth="70.0" text="Lorem" BorderPane.alignment="CENTER">
-                     <font>
-                        <Font size="22.0" />
-                     </font>
-                     <styleClass>
-                        <String fx:value="bold" />
-                        <String fx:value="tertiary" />
-                     </styleClass>
-                  </Label>
-               </top>
                <bottom>
                   <Button fx:id="cancelBtn" mnemonicParsing="false" onAction="#toCancelScene" prefHeight="34.0" prefWidth="78.0" styleClass="btn-secondary" text="Cancel" BorderPane.alignment="CENTER">
                      <BorderPane.margin>
@@ -52,10 +41,14 @@
                         <String fx:value="bold" />
                      </styleClass>
                   </Label>
-                  <ComboBox prefHeight="26.0" prefWidth="112.0" styleClass="btn-primary">
+                  <ComboBox fx:id="comboBox" prefHeight="40.0" prefWidth="150.0" stylesheets="@../../../../Main.css">
                      <HBox.margin>
                         <Insets right="20.0" />
                      </HBox.margin>
+                     <styleClass>
+                        <String fx:value="btn-primary" />
+                        <String fx:value="list-cell" />
+                     </styleClass>
                   </ComboBox>
                   <Button mnemonicParsing="false" onAction="#toShowTableView" prefHeight="31.0" prefWidth="80.0" styleClass="btn-primary" text="Show">
                      <font>
