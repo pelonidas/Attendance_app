@@ -39,7 +39,6 @@ public class TeacherOverviewController implements Initializable {
 
         for (int i = 0; i < studentListSize(); i++){
             Random random = new Random();
-            System.out.println(random.nextInt(90) + 10);
             series.getData().add(new XYChart.Data<>(studentsLastNameToChart(i), random.nextInt(90) + 10));
         }
         barChar.getData().add(series);

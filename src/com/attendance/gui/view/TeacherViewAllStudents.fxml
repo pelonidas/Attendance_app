@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" styleClass="bg-primary" stylesheets="/Main.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.attendance.gui.controller.TeacherViewAllStudentsController">
+<AnchorPane prefHeight="439.0" prefWidth="665.0" styleClass="bg-primary" stylesheets="/Main.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.attendance.gui.controller.TeacherViewAllStudentsController">
    <children>
       <BorderPane layoutX="148.0" layoutY="66.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <right>
@@ -29,7 +29,7 @@
                   </Label>
                </top>
                <bottom>
-                  <Button fx:id="cancelBtn" mnemonicParsing="false" onAction="#toCancelScene" prefHeight="25.0" prefWidth="66.0" styleClass="btn-secondary" text="Cancel" BorderPane.alignment="CENTER">
+                  <Button fx:id="cancelBtn" mnemonicParsing="false" onAction="#toCancelScene" prefHeight="34.0" prefWidth="78.0" styleClass="btn-secondary" text="Cancel" BorderPane.alignment="CENTER">
                      <BorderPane.margin>
                         <Insets bottom="20.0" />
                      </BorderPane.margin>

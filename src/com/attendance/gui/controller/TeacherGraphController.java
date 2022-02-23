@@ -48,4 +48,4 @@ public class TeacherGraphController implements Initializable {
         stage.close();
     }
 
-} //TODO change responsivity of the button in the view of this controller
+}
