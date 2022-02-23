@@ -62,12 +62,12 @@
                   <Insets left="40.0" />
                </GridPane.margin>
             </Label>
-            <Button mnemonicParsing="false" styleClass="btn-primary" text="Cancel" GridPane.rowIndex="6">
+            <Button fx:id="cancelBtn" mnemonicParsing="false" onAction="#toCancelScene" styleClass="btn-primary" text="Cancel" GridPane.rowIndex="6">
                <GridPane.margin>
                   <Insets left="40.0" />
                </GridPane.margin>
             </Button>
-            <Button mnemonicParsing="false" styleClass="btn-secondary" text="Confirm" GridPane.columnIndex="1" GridPane.rowIndex="6">
+            <Button fx:id="confirmBtn" mnemonicParsing="false" onAction="#toConfirm" styleClass="btn-secondary" text="Confirm" GridPane.columnIndex="1" GridPane.rowIndex="6">
                <GridPane.margin>
                   <Insets left="40.0" />
                </GridPane.margin>

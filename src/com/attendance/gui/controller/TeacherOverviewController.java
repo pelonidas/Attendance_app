@@ -1,9 +1,12 @@
 package com.attendance.gui.controller;
 
 import com.attendance.gui.model.MockData;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.chart.*;
+import javafx.scene.control.Button;
+import javafx.stage.Stage;
 
 import java.net.URL;
 import java.util.Random;
@@ -15,10 +18,10 @@ public class TeacherOverviewController implements Initializable {
     private BarChart<String, Number> barChar;
     @FXML
     private CategoryAxis xAxis;
+    @FXML
+    private Button cancelBtn;
 
     private MockData mockData;
-
-    //private ObservableList<String> monthStudent = FXCollections.observableArrayList();
 
 
     @Override
@@ -48,6 +51,12 @@ public class TeacherOverviewController implements Initializable {
 
     public int studentListSize(){
         return mockData.getStudents().size();
+    }
+
+    @FXML
+    void toCancelScene(ActionEvent event) {
+        Stage stage = (Stage) cancelBtn.getScene().getWindow();
+        stage.close();
     }
 
 
